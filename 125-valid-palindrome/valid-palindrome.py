@@ -12,9 +12,9 @@ class Solution:
 
             if s[l].lower() != s[r].lower():
                 return False
-            else:
-                l += 1
-                r -= 1
+
+            l += 1
+            r -= 1
         return True
 
         
