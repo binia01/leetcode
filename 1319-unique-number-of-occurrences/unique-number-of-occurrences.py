@@ -8,9 +8,4 @@ class Solution:
             else:
                 map[arrs] = 1
 
-        lst = list(map.values())
-        lis = list(set(lst))
-        if len(lst) == len(lis):
-            return True
-        return False
-        
+        return True if (len(set(map.values())) == len(map.values())) else False
