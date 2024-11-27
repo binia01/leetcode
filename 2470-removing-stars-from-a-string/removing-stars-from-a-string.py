@@ -3,9 +3,7 @@ class Solution:
         stack = []
         for word in s:
             if word == '*':
-                if stack:
-                    stack.pop()
-                continue
+                stack.pop()
             else:
                 stack.append(word)
         return ''.join(stack)
