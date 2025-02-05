@@ -6,4 +6,4 @@ class Solution:
             if count[key] > 1:
                 ans.append(key)
         return ans
-        
+       
