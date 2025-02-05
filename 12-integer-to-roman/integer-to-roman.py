@@ -3,15 +3,10 @@ class Solution:
         roman_num = {1000: "M", 900: "CM", 500: "D", 400: "CD",
             100: "C", 90: "XC", 50: "L", 40: "XL",
             10: "X", 9: "IX", 5: "V", 4: "IV", 1: "I"}
-        stri = []
-        i = 0
+        res = []
         for key in roman_num:
             while num >= key:
-                # ch = (num//key) * roman_num[key]
-                # stri.append(ch)
-                # num -= (num//key) * key
-                stri.append(roman_num[key])
+                res.append(roman_num[key])
                 num -= key
 
-
-        return "".join(stri)
+        return "".join(res)
