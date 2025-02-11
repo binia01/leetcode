@@ -5,7 +5,8 @@ class Solution:
          count = [0] * (maximum + minimum + 1)
          for num in nums:
              count[num + minimum] += 1
-             target = 0
+
+         target = 0
          for index, value in enumerate(count):
                 for i in range(value):
                     nums[target] = index - minimum
