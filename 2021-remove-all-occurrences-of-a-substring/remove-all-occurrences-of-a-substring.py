@@ -3,7 +3,7 @@ class Solution:
         n = len(s)
         k = len(part)
 
-        t =[" "]*n
+        t =[" "] * n
         j = 0
         for c in s:
             t[j] = c
