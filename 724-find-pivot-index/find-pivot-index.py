@@ -5,12 +5,11 @@ class Solution:
         for i in range(len(nums)):
             total += nums[i]
 
-        left = 0
-        right = 0
+        l,r =0,0
         for i in range(len(nums)):
-            right = total - left - nums[i]
-            if left == right:
+            r = total - nums[i] - l
+            if  l == r:
                 return i
             else:
-                left += nums[i]
-        return -1       
+                l += nums[i]
+        return -1
