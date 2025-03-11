@@ -1,8 +1,3 @@
 class Solution:
     def trailingZeroes(self, n: int) -> int:
-        zero = 0
-
-        while n:
-            n //= 5
-            zero += n
-        return zero
+        return 0 if n == 0 else self.trailingZeroes(n//5) + n//5
