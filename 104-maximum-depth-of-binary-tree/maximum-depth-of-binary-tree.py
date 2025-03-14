@@ -10,7 +10,6 @@ class Solution:
         if not root:
             return count
         count +=1
-        lcount = rcount = 0
         lcount = self.maxDepth(root.left)
         rcount = self.maxDepth(root.right)
         count += max(lcount, rcount)
