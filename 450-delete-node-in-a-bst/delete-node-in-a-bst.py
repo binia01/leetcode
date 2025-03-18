@@ -21,10 +21,10 @@ class Solution:
         if root.left is None:
             return root.right
 
-        min_right_subtree = root.right
-        while min_right_subtree.left:
-            min_right_subtree = min_right_subtree.left
-
-        root.val = min_right_subtree.val
-        root.right = self.deleteNode(root.right, min_right_subtree.val)
+        cur= root.right
+        while cur.left:
+            cur = cur.left
+        
+        root.val = cur.val
+        root.right = self.deleteNode(root.right, root.val)
         return root
