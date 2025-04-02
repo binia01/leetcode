@@ -1,11 +1,11 @@
 class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
-        def check(name):
+        def check(mid):
             prev = position[0]
             count = 1
 
             for pos in position[1:]:
-                if pos - prev >= name:
+                if pos - prev >= mid:
                     prev = pos
                     count +=1
             return count 
